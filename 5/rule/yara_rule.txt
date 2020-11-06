@@ -1,0 +1,29 @@
+rule ExampleRule1
+{
+	meta:
+		custom_title = "Custom Vulnerability"
+		custom_level = "High" // High, Medium, Low
+		custom_description = "Custom description"
+
+    strings:
+        $regex_string = /custom_res\.some_redirect\(custom_req\.query\.url\)/
+
+    condition:
+        $regex_string
+}
+
+rule ExampleRule2
+{
+	meta:
+		component_name = "Custom Component"
+		component_version = "1.0.0"
+		custom_title = "Custom Component 1.0.0"
+		custom_level = "Medium" // High, Medium, Low
+		custom_description = "Custom description"
+
+    strings:
+        $text_string = "#My Vulnerable Component 1.0.0"
+
+    condition:
+        $text_string
+}

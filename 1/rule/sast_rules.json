@@ -1,0 +1,35 @@
+{
+  "pvfs": [
+    {
+      "type": "SQL Injection",
+      "class": "tmp.FrameworkClassWithPvf",
+      "function": "pvf",
+      "params": [
+        "java.lang.String"
+      ],
+      "vulnParam": "0"
+    }
+  ],
+  "filters": [
+    {
+      "type": "SQL Injection",
+      "class": "tmp.FrameworkClassWithFilter",
+      "function": "filter",
+      "params": [
+        "java.lang.String"
+      ]
+    }
+  ],
+  "vulnerabilities": [],
+  "entryPoints": [
+    {
+      "class": "TestServlet",
+      "function": "customEntryPoint",
+      "params": [
+        "java.lang.String",
+        "java.lang.String",
+        "javax.servlet.http.HttpServletResponse"
+      ]
+    }
+  ]
+}
